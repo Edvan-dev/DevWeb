@@ -26,18 +26,12 @@ Instalação
        bash
        node server.js
 Como Usar
-    1. Configuração de Ativos: Edite o arquivo config.json para adicionar os IPs ou nomes de host dos ativos que deseja monitorar.
-       json
-       
-       {
-         "assets": [
-           "192.168.1.1",
-           "192.168.1.2",
-           "server.local"
-         ]
-       }
-    2. Executando o Software: Inicie o servidor Node.js e acesse a interface frontend para visualizar o status dos ativos monitorados.
-    3. Acessando o Dashboard: Abra o navegador e vá para http://localhost:3000 para visualizar o dashboard em tempo real.
+    • Acessando o Dashboard: Abra o navegador e vá para http://localhost:3000 para visualizar o dashboard em tempo real.
+    • Adicionando Ativos: No dashboard, você encontrará um campo para adicionar novos ativos de rede. Insira o IP ou o nome de host e clique em "Adicionar". O novo ativo será incluído na lista e monitorado imediatamente.
+    • Removendo Ativos: Para remover um ativo, clique no botão de exclusão ao lado do ativo desejado na lista. Isso interromperá o monitoramento do dispositivo em questão.
+    • Visualizando o Status: A interface exibe o status de cada ativo em tempo real, indicando se está "Online" ou "Offline".
+Executando o Software: Inicie o servidor Node.js e acesse a interface frontend para visualizar o status dos ativos monitorados.
+
 Estrutura do Projeto
 
 Up_detector/
