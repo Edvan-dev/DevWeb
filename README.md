@@ -1,4 +1,4 @@
-Descrição
+<h1 align="center"> Descrição </h1>
 
 UP DETECTOR é uma aplicação desenvolvida para monitorar a disponibilidade de ativos de rede em tempo real utilizando ping ICMP. 
 Ideal para equipes de TI e administradores de redes, a aplicação conta com uma interface frontend em HTML5 que permite visualizar 
