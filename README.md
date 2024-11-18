@@ -4,12 +4,25 @@
 Ideal para equipes de TI e administradores de redes, a aplicação conta com uma interface frontend em HTML5 que permite visualizar 
 o status dos ativos de forma intuitiva. O backend, implementado em Node.js, é responsável por realizar as verificações e atualizar o frontend.</p>
 
-Funcionalidades
-    • Monitoramento ICMP (Ping): Verifica a disponibilidade dos dispositivos de rede por meio de pings ICMP.
-    • Notificações de Falha: Exibe alertas no frontend em caso de indisponibilidade dos ativos.
-    • Interface de Status em Tempo Real: Mostra o status de cada ativo em uma página web responsiva.
-    • Logs de Eventos: Registra históricos de disponibilidade para consulta.
-    • Configuração Fácil: Permite adicionar e remover ativos diretamente no arquivo de configuração.
+<h2>Funcionalidades</h2>
+    <ul>
+        <li>
+            Monitoramento ICMP (Ping): Verifica a disponibilidade dos dispositivos de rede por meio de pings ICMP.
+        </li>
+        <li>
+            Notificações de Falha: Exibe alertas no frontend em caso de indisponibilidade dos ativos.
+        </li>
+        <li>
+            Interface de Status em Tempo Real: Mostra o status de cada ativo em uma página web responsiva.
+        </li>
+        <li>
+            Logs de Eventos: Registra históricos de disponibilidade para consulta.
+        </li>
+        <li>
+            Configuração Fácil: Permite adicionar e remover ativos diretamente no arquivo de configuração.
+        </li>
+    </ul>
+
 Requisitos
     • Node.js 14+
     • Frontend: HTML5, CSS3, JavaScript (fetch API)
