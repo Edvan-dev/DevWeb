@@ -102,26 +102,6 @@ o status dos ativos de forma intuitiva. O backend, implementado em Node.js, é r
 
 <h2>Estrutura do Projeto</h2>
 <img src="Estrutura.png" alt="estrutura">
-<dl>
-    <dd>
-        Up_detector/
-    </dd>
-    <dd>
-        ├── public/
-    </dd>
-    <dd>
-     │ 
-    </dd>
-</dl>
-
-Up_detector/
-├── public/
-│   ├── index.html       # Interface frontend
-│   ├── styles.css       # Estilos CSS
-│   └── script.js        # Lógica frontend
-├── config.json          # Configuração de ativos de rede
-├── server.js            # Servidor backend em Node.js
-└── README.md            # Documentação do projeto
 
 <h2>Contribuição</h2>
 Sinta-se à vontade para contribuir com este projeto! Basta seguir os passos abaixo:
