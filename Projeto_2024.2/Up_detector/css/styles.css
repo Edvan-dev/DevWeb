@@ -19,6 +19,12 @@ body {
     text-align: center;
 }
 
+.full-screen{
+    width: 180%;
+    height: 100%;
+    object-fit: contain; 
+}
+
 .logo img {
     width: 350px; /* Tamanho ajustável conforme necessário */
     height: auto;
