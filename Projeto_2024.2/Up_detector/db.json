@@ -1,0 +1,20 @@
+{
+  "users": [
+    {
+      "username": "Edvan",
+      "password": "1234"
+    },
+    {
+      "username": "joao",
+      "password": "1234"
+    }
+  ],
+  "urls": [
+    {
+      "url": "8.8.8.8"
+    },
+    {
+      "url": "1.1.1.1"
+    }
+  ]
+}
