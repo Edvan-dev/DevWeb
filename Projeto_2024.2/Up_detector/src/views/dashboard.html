@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+      <meta charset="UTF-8">
+      <title>Monitoramento ICMP</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+      <div class="container">
+        <h1 class="mt-4">Monitoramento ICMP</h1>
+        <form id="addIPForm" class="form-inline justify-content-center mb-4">
+            <input type="text" name="ip_address" class="form-control mr-sm-2" placeholder="IP" required>
+            <button type="submit" class="btn btn-primary">Adicionar IP</button>
+        </form>
+        <ul id="ip-list" class="list-group mb-4">
+            </ul>
+        <div class="chart-container">
+          <canvas id="pingChart"></canvas>
+          <div class="table-container">
+            <h2>Tempos de Ping</h2>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>IP</th>
+                  <th>Último Tempo de Ping (ms)</th>
+                </tr>
+              </thead>
+              <tbody id="pingTimesBody">
+                </tbody>
+            </table>
+          </div>
+        </div>
+        <a href="/auth/login" class="text-info mt-4">Voltar ao login</a>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script src="/js/dashboard.js"></script>
+</body>
+</html>
