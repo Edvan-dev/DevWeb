@@ -9,7 +9,7 @@ const router = express.Router();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Function for login: validates the user, compares the password and generates the JWT token
+// Função de login: valida o usuário, compara a senha e gera o token JWT.
 export const login = async (req, res) => {
     const { username, password } = req.body;
   
@@ -37,8 +37,8 @@ export const login = async (req, res) => {
     }
 };
   
-// Function for register: creates a new user and redirects according to the result.
-// If the username already exists, it redirects back to the registration page with an error message.
+// Função de registro: cria um novo usuário e redireciona de acordo com o resultado.
+// Se o nome de usuário já existir, redireciona de volta para a página de registro com uma mensagem de erro.
 export const register = async (req, res) => {
     const { username, password } = req.body;
   
@@ -56,7 +56,7 @@ export const register = async (req, res) => {
         },
       });
   
-      // Upon successful registration, redirect to the login page.
+      // Após o registro bem-sucedido, redirecionar para a página de login.
       return res.redirect('/auth/login');
     } catch (error) {
       console.error('Erro no registro:', error);
