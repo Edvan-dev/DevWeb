@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+      <meta charset="UTF-8">
+      <title>Monitoramento ICMP</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+  <div class="container mt-4">
+    <h1 class="text-center text-primary mb-4">Monitoramento ICMP</h1>
+
+    <!-- Formulário para adicionar IP -->
+    <form id="addIPForm" class="form-inline justify-content-center mb-4">
+        <input type="text" name="ip_address" class="form-control mr-2" placeholder="IP" required>
+        <button type="submit" class="btn btn-primary">Adicionar IP</button>
+    </form>
+
+    <!-- Linha para tabela de IPs e tempos de ping -->
+    <div class="row mb-4">
+        <!-- Tabela de IPs -->
+        <div class="col-12 col-md-6">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h2 class="card-title text-primary">IPs Cadastrados</h2>
+                    <table class="table table-hover" id="ip-table">
+                        <thead>
+                            <tr>
+                                <th>IP</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ip-list">
+                            <!-- Linhas serão adicionadas dinamicamente -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabela de Tempos de Ping -->
+        <div class="col-12 col-md-6">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h2 class="card-title text-primary">Tempos de Ping</h2>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>IP</th>
+                                <th>Último Ping (ms)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="pingTimesBody">
+                            <!-- Dados serão preenchidos dinamicamente -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gráfico -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow" id="pingChartCard">
+                <div class="card-body">
+                    <canvas id="pingChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link para voltar ao login -->
+    <div class="text-center mt-4">
+        <a href="/auth/login" class="text-info">Voltar ao login</a>
+    </div>
+</div>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script src="/js/dashboard.js"></script>
+</body>
+</html>
