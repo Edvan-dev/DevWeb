@@ -1,133 +1,126 @@
-<h1 align="center"> Descrição </h1>
+# WebApp Updetector
 
-<p>UP DETECTOR é uma aplicação desenvolvida para monitorar a disponibilidade de ativos de rede em tempo real utilizando ping ICMP. 
-Ideal para equipes de TI e administradores de redes, a aplicação conta com uma interface frontend em HTML5 que permite visualizar 
-o status dos ativos de forma intuitiva. O backend, implementado em Node.js, é responsável por realizar as verificações e atualizar o frontend.</p>
+Este repositório contém um webapp para monitoramento de latência (ping) e gerenciamento de endereços IP. A aplicação possui uma interface gráfica com gráficos dinâmicos para exibir os tempos de ping em tempo real e permite adicionar, deletar e monitorar IPs via chamadas para endpoints RESTful.
 
-<h2>Funcionalidades</h2>
-    <ul>
-        <li>
-            Monitoramento ICMP (Ping): Verifica a disponibilidade dos dispositivos de rede por meio de pings ICMP.
-        </li>
-        <li>
-            Notificações de Falha: Exibe alertas no frontend em caso de indisponibilidade dos ativos.
-        </li>
-        <li>
-            Interface de Status em Tempo Real: Mostra o status de cada ativo em uma página web responsiva.
-        </li>
-        <li>
-            Logs de Eventos: Registra históricos de disponibilidade para consulta.
-        </li>
-        <li>
-            Configuração Fácil: Permite adicionar e remover ativos diretamente no arquivo de configuração.
-        </li>
-    </ul>
+## Funcionalidades
 
-<h2>Requisitos</h2>
-    <ul>
-        <li>
-            Node.js 14+
-        </li>
-        <li>
-            Frontend: HTML5, CSS3, JavaScript (fetch API)
-        </li>
-        <li>
-            Dependências Node.js: ping, express
-        </li>
-    </ul>
-    
-<h2>Instalação</h2>
-    <ol>
-        <li>
-            Clone o repositório:
-            <ul>
-                <li>
-                    bash
-                </li>
-                <li>
-                    git clone https://github.com/Edvan-dev/DevWeb
-                </li>
-                <li>
-                    cd network-asset-monitoring
-                </li>
-            </ul>
-        </li>
-        <li>
-            Instale as dependências:
-            <ul>
-                <li>
-                    bash
-                </li>
-                <li>
-                     npm install
-                </li>
-            </ul>
-        </li>
-        <li>
-            Inicie o servidor:
-            <ul>
-                <li>
-                    bash
-                </li>
-                <li>
-                     node server.js
-                </li>
-            </ul>
-        </li>
-    </ol>
-    
-<h2>Como Usar</h2>
-<ul>
-    <li>
-        Acessando o Dashboard: Abra o navegador e vá para http://localhost:3000 para visualizar o dashboard em tempo real.
-    </li>
-     <li>
-        Adicionando Ativos: No dashboard, você encontrará um campo para adicionar novos ativos de rede. Insira o IP ou o nome de host e clique em "Adicionar". O novo ativo será incluído na lista e monitorado imediatamente.
-    </li>
-     <li>
-        Removendo Ativos: Para remover um ativo, clique no botão de exclusão ao lado do ativo desejado na lista. Isso interromperá o monitoramento do dispositivo em questão.
-    • Visualizando o Status: A interface exibe
-    </li>
-     <li>
-        o status de cada ativo em tempo real, indicando se está "Online" ou "Offline".
-    </li>
-</ul>
- 
-<h2>Executando o Software:</h2>
-<ul>
-    <li>
-        Inicie o servidor Node.js e acesse a interface frontend para visualizar o status dos ativos monitorados.
-    </li>
-</ul>
+- Exibe gráficos dinâmicos do tempo de resposta (ping) usando Chart.js.
+- Permite iniciar e parar o monitoramento do ping para IPs específicos.
+- Gerencia uma lista de endereços IP, com funcionalidade para adicionar e remover.
+- Atualiza automaticamente os últimos tempos de ping na interface.
+- Comunicação com a API backend para operações de ping, listagem, adição e remoção de IPs.
 
-<h2>Estrutura do Projeto</h2>
-<img src="Estrutura.png" alt="estrutura">
+## Requisitos
 
-<h2>Contribuição</h2>
-Sinta-se à vontade para contribuir com este projeto! Basta seguir os passos abaixo:
-<ol>
-    <li>
-        Fork este repositório.
-    </li>
-    <li>
-        Crie uma nova branch: git checkout -b minha-feature.
-    </li>
-    <li>
-        Faça commit das suas mudanças: git commit -m 'Minha nova feature'.
-    </li>
-    <li>
-        Faça push para a branch: git push origin minha-feature.
-    </li>
-    <li>
-        Abra um Pull Request.
-    </li>
-</ol>
+- Node.js (versão 14 ou superior)
+- NPM ou Yarn
+- Backend configurado com os seguintes endpoints:
+  - `GET /dashboard/get-ips`
+  - `POST /dashboard/add-ip`
+  - `POST /dashboard/delete-ip`
+  - `GET /dashboard/ping/:ip`
+  - `GET /dashboard/last-ping-times`
+- Um servidor web para servir os arquivos estáticos (HTML, CSS, JS)
 
-<h3>Licença</h3>
-Este projeto está licenciado sob a MIT License.
+## Estrutura de Pastas
 
-<h3>Contato</h3>
-Para dúvidas ou sugestões, entre em contato com edvsplus@gmail.com
+A estrutura do projeto segue o exemplo abaixo. A imagem a seguir ilustra a organização do repositório:
 
+![Folder Structure](folder-structure.png)
 
+## Instalação e Configuração
 
+1. Faça o clone do repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   ```
+
+2. Acesse o diretório do projeto:
+   ```bash
+   cd nome-do-repositorio
+   ```
+
+3. Instale as dependências:
+   ```bash
+   npm install
+   ```
+
+4. Configure as variáveis de ambiente (se necessário). Crie um arquivo `.env` na raiz do projeto e defina, por exemplo:
+   ```bash
+   NODE_ENV=development
+   PORT=3000
+   DATABASE_URL=<sua_url_de_conexao>
+   SECRET=<sua_chave_secreta>
+   ```
+
+## Como Iniciar
+
+### Modo de Desenvolvimento
+
+1. Certifique-se de que o backend está devidamente configurado e rodando.
+2. Inicie o servidor em modo desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+3. Abra o navegador e acesse:
+   ```
+   http://localhost:3000
+   ```
+4. Faça login (caso o sistema exija autenticação) para gerar o token necessário e utilizar o webapp.
+
+### Modo de Produção
+
+1. Compile os arquivos (se aplicável) usando o build script definido no package.json:
+   ```bash
+   npm run build
+   ```
+2. Inicie o servidor em modo produção:
+   ```bash
+   npm start
+   ```
+
+## Tecnologias Utilizadas
+
+- HTML5, CSS3 e JavaScript (ES6+)
+- Chart.js para renderização dos gráficos
+- Fetch API para comunicação com os endpoints do backend
+- Node.js com Express (ou outra framework backend, conforme implementação)
+
+## Estrutura do Código
+
+- **public/**: Arquivos estáticos (HTML, CSS, JavaScript)
+  - **js/dashboard.js**: Lógica de interface e comunicação com o backend para monitoramento dos pings.
+- **routes/**: Endpoints do servidor (por exemplo, para o dashboard e APIs)
+- **views/**: Templates do lado do servidor (se aplicável)
+- **server.js**: Arquivo principal para iniciar o servidor
+- **package.json**: Dependências e scripts do projeto
+
+## Contribuição
+
+1. Faça um fork do projeto.
+2. Crie uma branch para sua feature (`git checkout -b feature/nova-funcionalidade`).
+3. Faça commit das suas alterações (`git commit -am 'Adiciona nova funcionalidade'`).
+4. Faça push para a branch (`git push origin feature/nova-funcionalidade`).
+5. Abra um Pull Request.
+
+## Licença
+
+Distribuído sob a licença MIT. Veja [LICENSE](LICENSE) para mais informações.
+```
+
+```plaintext:folder-structure.png
+project_root/
+├── public/
+│   ├── css/
+│   │   └── styles.css
+│   ├── js/
+│   │   └── dashboard.js
+│   └── index.html
+├── routes/
+│   └── dashboard.js
+├── views/
+│   └── dashboard.ejs
+├── .env
+├── app.js
+├── package.json
+└── README.md
