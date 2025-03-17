@@ -22,11 +22,11 @@ Este repositório contém um webapp para monitoramento de latência (ping) e ger
   - `GET /dashboard/last-ping-times`
 - Um servidor web para servir os arquivos estáticos (HTML, CSS, JS)
 
-## Estrutura de Pastas
+## Dashboard do app
 
-A estrutura do projeto segue o exemplo abaixo. A imagem a seguir ilustra a organização do repositório:
+A imagem a seguir ilustra a área de trabalho do app:
 
-![Folder Structure](folder-structure.png)
+![Folder Structure](Dashboard.png)
 
 ## Instalação e Configuração
 
